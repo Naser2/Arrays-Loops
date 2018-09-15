@@ -1,4 +1,3 @@
-
 let number = 10
 
 for (var i = 1; i < number; i++) {
@@ -69,6 +68,7 @@ for (var i = 1; i < numbers.length; i ++) {
   "Hello world " + i + " times"
 }
 
+/// -----------------------------------------------////
 
 //RANDOMIZED HillBilly small Steps
 var compass = ["East", "West", "North", "South" ]
@@ -106,7 +106,7 @@ for (var prop in myArray) {
     }
 }
 
-
+//   ******************     ///
 //Finish This so it does not run inifinitely
 // var theMark = true;
 // function  doSomething(a, b) {
@@ -208,12 +208,12 @@ function forLoop(array) {
 }
 
 
-// Todo: Create a function called whileLoop
-var number = 10
+//    ********* Todo: Create a function called whileLoop  **********
+var fixum = 10
 
-function whileLoop(number) {
-	while ( 0 < number) {
-		console.log(--number);
+function whileLoop(fixum) {
+	while ( 0 < fixum) {
+		console.log(--fixum);
 	}
 	return 'done';
 }
