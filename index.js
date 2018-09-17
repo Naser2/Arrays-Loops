@@ -239,10 +239,10 @@
 // }
 //
 var num = 10.8
-var  i = 0
+  i = 0
 i <= num
 function whileTrue() {
-
+  
 
   return Math.random() >= num // Returns a random number between 0 (inclusive) and 1 (exclusive)
 }
