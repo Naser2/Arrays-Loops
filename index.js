@@ -238,6 +238,188 @@ var i = 0;
 	return array;
 }
 
-// // forEach(i in gifts) {
-// //   console.log(gifts)
-// // }
+
+
+
+
+// ********** MORE LOOPS *************
+
+var musicians = ["Jhon", "Peter"]
+var instruments = ["Guitar", "Djembe"]
+
+
+// Musicians & Instruments
+function theBeatlesPlay(musicians, instruments) {
+  var store1 = []
+
+  for (let i = 0; i < musicians.length && instruments.length; i++ ) {
+    store1.push(`${musicians[i]} plays ${instruments[i]}`)
+
+     }
+     return store1
+  }
+
+
+theBeatlesPlay(musicians, instruments)
+
+
+// FACTS
+function johnLennonFacts(facts) {
+const withBang = []
+
+  var i = 0
+
+  while ( i < facts.length) {
+    withBang.push(facts[i] += '!!!')
+    i +=1
+  }
+
+  return withBang
+};
+
+// NUMBER times "I love the Bea...."
+function iLoveTheBeatles(n) {
+  var store2 = []
+
+    do {  store2.push("I love the Beatles!")
+        n += 1
+       }
+
+    while ( n < 15) {
+
+     }
+
+    return store2
+}
+
+
+// ********* FOR EACH ************ //
+
+var fruits = [{
+    name: "banana",
+    weight: 150
+}, {
+    name: "apple",
+    weight: 130
+}, {
+    name: "orange",
+    weight: 160
+}, {
+    name: "kiwi",
+    weight: 80
+}]
+
+fruits.forEach(function(item, index) {
+    console.log("Current: " + item.name);
+    if (index > 0) {
+        console.log("Previous: " + fruits[index - 1].name);
+    }
+    if (index < fruits.length - 1) {
+        console.log("Next: " + fruits[index + 1].name);
+    }
+});
+
+var name = ["james", "Ben"]
+// var katzDeliLine = [];
+
+// function takeANumber(katzDeliLine, name) {
+
+//    katzDeliLine.forEach(function(index, name) {
+//      katzDeliLine.push(`${index}. ${name}`)
+//     console.log(katzDeliLine);
+//    })
+//   return `Welcome, ${name}. You are number ${1} in line.`
+// }
+// takeANumber(katzDeliLine, name)
+
+
+
+// var people = ["james", "Ben", "Sekou"]
+// var katzDeliLine = [];
+
+// function takeANumber(katzDeliLine, people) {
+
+//    people.forEach(function(index, name) {
+//      katzDeliLine.push(`${index}. ${name}`)
+//     console.log(` 'Current: '  + ${name}`);
+//    })
+//   return `Welcome, ${name}. You are number ${index} in line.`
+// }
+// takeANumber(katzDeliLine, people)
+
+// var name = ["james", "Ben", "Sekou"]
+
+************ KATZDELI MY WAY Using ForEacH *****************
+
+var waitingInLine = ["james", "Ben", "Sekou"];
+
+function currentLine(waitingInLine) {
+  if (!waitingInLine.length) {
+    return "The line is currently empty."
+  }
+  var indexLine = []
+  var index = 0
+  waitingInLine.forEach(function(name, index) {
+      index += 1
+    indexLine.push(`${index}. ${name}`)
+
+    console.log(indexLine)
+  })
+
+  return  `The line is currently: ${indexLine.join(', ')}`
+}
+
+// TAKE A NUMBER
+function takeANumber(waitingInLine, name) {
+
+  waitingInLine.push(name)
+   return `Welcome, ${name}. You are number ${waitingInLine.length } in line.`
+}
+
+//NOW SERVING
+function nowServing(waitingInLine) {
+
+  if(!waitingInLine.length) {
+    return "There is nobody waiting to be served!"
+      console.log(`The line is currently: ${waitingInLine.shift()}`)
+
+  } else {
+  return`Currently serving ${waitingInLine.shift()}.`
+  }
+}
+
+
+  takeANumber(waitingInLine, name)
+  nowServing(waitingInLine)
+  currentLine(waitingInLine)
+
+
+  /// ******** KATZDELI SOLUTION ************ ///
+
+  function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
+  }
+
+  const numbersAndNames = []
+
+  for (let i = 0, l = line.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+  }
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+};
+
+function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
+
+  return `Currently serving ${line.shift()}.`
+};
+
+function takeANumber(line, name) {
+  line.push(name)
+
+  return `Welcome, ${name}. You are number ${line.length} in line.`
+};
